@@ -3,7 +3,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 BANKS = ["MBank", "Bakai", "Optima Bank", "MegaPay", "Simbank", "DemirBank", "O!Bank"]
 
 
-def banks_kb(t: dict) -> InlineKeyboardMarkup:
+def banks_kb() -> InlineKeyboardMarkup:
     rows = []
     for i in range(0, len(BANKS), 2):
         row = [

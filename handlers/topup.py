@@ -10,7 +10,6 @@ from states.topup import TopupStates
 from keyboards.captcha import topup_captcha_kb, TOPUP_CAPTCHA_ANSWER
 from keyboards.banks import banks_kb, confirm_id_kb
 from keyboards.admin import topup_admin_kb
-from keyboards.main import main_menu_kb
 from utils.validators import is_valid_xbet_id, is_valid_amount
 from utils.order import generate_order_id
 from utils.deeplinks import get_bank_url
@@ -86,7 +85,7 @@ async def topup_enter_amount(message: Message, state: FSMContext, t: dict) -> No
 
     await state.update_data(amount=amount)
     await state.set_state(TopupStates.select_bank)
-    await message.answer(t["select_bank"], reply_markup=banks_kb(t))
+    await message.answer(t["select_bank"], reply_markup=banks_kb())
 
 
 @router.callback_query(TopupStates.select_bank, F.data.startswith("bank:"))

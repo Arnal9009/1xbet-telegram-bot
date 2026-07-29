@@ -94,5 +94,4 @@ texts = {
     "withdraw_approved": "✅ Funds have been transferred to your card!",
     "withdraw_rejected_wrong_code": "❌ Order declined: invalid withdrawal code.",
 
-    "btn_back": "⬅️ Back to menu",
 }
